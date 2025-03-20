@@ -13,7 +13,7 @@ Before running this project, you need to install **Go**. Follow the steps below 
 2. Run the `.msi` installer and follow the on-screen instructions.  
 3. Verify the installation by running:  
    ```sh
-   go version
+go version
    ```
 
 
