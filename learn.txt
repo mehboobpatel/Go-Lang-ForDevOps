@@ -1,0 +1,8 @@
+
+Command	Purpose
+go mod init <name>	Initializes a Go module (creates go.mod)
+go.mod	Stores project details and dependencies
+go get <package>	Downloads a dependency and updates go.mod
+go.sum	Security file that verifies dependencies
+go mod tidy	Removes unused dependencies & fixes missing ones
+go run <file.go>	Runs the Go program
