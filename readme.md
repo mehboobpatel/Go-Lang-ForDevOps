@@ -12,11 +12,10 @@ Before running this project, you need to install **Go**. Follow the steps below 
 1. Download the latest **Go installer** from [golang.org](https://go.dev/dl/).  
 2. Run the `.msi` installer and follow the on-screen instructions.  
 3. Verify the installation by running:  
-   ```sh
+```sh
 go version
    ```
-
-
+   
 ### **🔹 Macos**  
 
 ```sh
