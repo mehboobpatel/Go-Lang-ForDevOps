@@ -1,28 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kelp-client
+  name: test-client
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kelp-client
+      app: test-client
   template:
     metadata:
       labels:
-        app: kelp-client
+        app: test-client
     spec:
       containers:
-      - name: kelp-client
-        image: kelpimg.azurecr.io/kelp-client:latest
+      - name: test-client
+        image: testimg.azurecr.io/test-client:latest
         imagePullPolicy: IfNotPresent
-        volumeMounts:
-        - mountPath: /etc/nginx/conf.d/
-          name: nginx-configmap
-      imagePullSecrets:
-        - name: k8s
-      volumes:
-        - configMap:
-            name: nginx-configmap
-          name: nginx-configmap
+
