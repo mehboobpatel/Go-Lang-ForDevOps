@@ -92,12 +92,15 @@ Go to the project directory
 Initialize your WorkDir
 
 ```bash
-go mod init
+go mod init <yourprojectname>
 ```
+- This will generate go.mod
 
 To Download any Additional package 
 ```bash
-go get <package>
+go get k8s.io/client-go@latest
+```
+- This will generate go.sum
 
 If your code imports a package that is not in go.mod, it adds it and updates go.sum.
 If your go.mod file contains imports that are no longer used, it removes them from go.mod and go.sum
