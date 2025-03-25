@@ -19,6 +19,7 @@ Go, also known as Golang, is an open-source programming language developed by Go
 Learn how to declare and initialize variables in Go.
 
 **File:** `vardecl.go`
+
 ![Alt text](images/image2vartypes.png)
 
 ![Alt text](images/image1zerovalues.png)
