@@ -46,10 +46,4 @@ func main() {
 	//Recievening the remainging onelement from the belt
 	//The belt will look like (empty) after this
 	fmt.Println("Received first message:", msg1)
-
-	// msg2 := <-messages // Receiving the second message
-	// fmt.Println("Received second message:", msg2)
-
-	// msg3 := <-messages // Receiving the second message
-	// fmt.Println("Received second message:", msg3)
 }
