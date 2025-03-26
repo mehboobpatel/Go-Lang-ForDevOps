@@ -64,7 +64,7 @@ When you run a program in any language, the operating system (OS) and CPU handle
 
 
 ### Example: Traditional Execution (Synchronous)
-**File:** [`synch.go`](synch.go)
+**File:** [`traditional.go`](1withoutgorout.go)
 
 - Task 1 starts → waits for 2 seconds → completes.
 - Task 2 starts → waits for 2 seconds → completes.
@@ -208,6 +208,8 @@ Task2
 ### Output 2 with 	time.Sleep(2 * time.Second) // WORKER2 Simulating some work (2 sec delay)
 ![alt text](images/3bassichn.png)
 
+
+## Implementing Two Channels
 **File:** [` 4twochannels.go`](4twochannels.go)
 
 ### Output
@@ -244,6 +246,55 @@ So, your factory (program) sends the completed orders to the channel whenever th
 
 ## WAYS TO CALL GO ROUTINE AND GO ROUTINE INLINE/LAMBDA FUNCTION
 
+
+**What is an Inline Function in Go?**
+An inline function in Go is an anonymous function (also called a lambda function) that is defined and executed immediately within the same expression.
+
+🔹 Why Use Inline Functions?
+✅ Avoids the need to define separate functions
+✅ Useful for short operations or one-time execution
+✅ Can be used inside Go routines for quick execution
+
+
+**File: checkout our file and also below code** [`6waystocallgorout.go`](6waystocallgorout.go)
+
+
+```
+
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	// Running an anonymous function in a Go routine
+	go func(task string) {
+		fmt.Println(task, "started...")
+		time.Sleep(2 * time.Second)
+		fmt.Println(task, "completed.")
+	}("Background Task")
+
+	// Main function continues
+	fmt.Println("Main function running...")
+
+	// Give Go routine time to complete
+	time.Sleep(3 * time.Second)
+	fmt.Println("Main function exits.")
+}
+```
+## OUTPUT
+
+```
+Main function running...
+Background Task started...
+Background Task completed.
+Main function exits.
+```
+
+
+
 ## Final Takeaways
 
 - **Without Goroutines:**
@@ -258,3 +309,5 @@ So, your factory (program) sends the completed orders to the channel whenever th
 ---
 
 🚀 Happy coding with Go!
+
+[def]: 6wa
