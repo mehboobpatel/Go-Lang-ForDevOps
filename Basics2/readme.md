@@ -240,8 +240,9 @@ Let’s assume the Go runtime picks Order 4 first to get CPU time.
 Then Order 1 starts finishing up.
 
 Order 5 finishes next, and so on.
-
 So, your factory (program) sends the completed orders to the channel whenever they finish.
+
+
 ---
 
 ## WAYS TO CALL GO ROUTINE AND GO ROUTINE INLINE/LAMBDA FUNCTION
