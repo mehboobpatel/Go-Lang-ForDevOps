@@ -45,6 +45,9 @@ An **interface** in Go is like a contract. It defines a set of methods that a ty
 ✅ **Reusable Code**: Functions can accept any type that implements the interface.
 
 ### Analogy:
+
+Think of a real-world scenario: You are building a graphics application that works with various shapes (e.g., Circle, Square, Rectangle, Triangle). If you don't use interfaces, you would have to write a separate function for calculating the area for every new shape, and the rest of your code would become increasingly difficult to scale and maintain. With interfaces, you only need to create a struct for new shape type and implement make a func of that newly created struct implementing the Area() method for it. Your existing code will continue to work because it interacts with the interface, not specific types.
+
 Think of an interface as a universal charger. For example:
 - A "DeviceCharger" interface says, "You must have a `Charge()` method."
 - Any device (like an iPhone or Samsung) that has a `Charge()` method can use the universal charger.
