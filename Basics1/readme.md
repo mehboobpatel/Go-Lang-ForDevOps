@@ -70,18 +70,4 @@ They return both the index and value while looping over elements.
 
 **File:** [`ranges.go`](ranges.go)  
 
-## Channels
-Channels in Go are used to communicate between goroutines.  
-They allow you to send and receive values between different parts of your program running concurrently.
-
-### Components of a Channel
-- **Declaration:** `make(chan Type)` creates a new channel of the specified type.
-- **Sending:** `channel <- value` sends a value into the channel.
-- **Receiving:** `value := <-channel` receives a value from the channel.
-
-### Example
-In the provided code, two goroutines send messages into the `messages` channel. The main function waits for these messages and prints them.
-
-**File:** [`channels.go`](channels.go)
-
 Happy coding with Go!
